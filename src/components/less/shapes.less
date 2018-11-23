@@ -1,0 +1,79 @@
+
+/*CSS for Shapes Page*/
+.shapesPage{
+    
+    .textHolder{
+        width:35%;
+        float:right;
+        text-align: left;
+        padding:10px 40px;
+        padding-left:20px;
+        .titleText{
+            display:inline-block;
+            padding-bottom: 10px;
+            border-bottom: 2px solid @header-color;
+            margin-bottom: 20px;
+            h2{
+                margin-top:0px;
+            }
+        }
+        .subText{
+            margin-top:30px;
+            h4{
+                color: @subheader-color;
+
+            }
+        }
+    }
+    .imageHolder{
+        margin-top:30px;
+        width:65%;
+    }
+    
+    button{
+        width:100%;
+    }
+    /*Adjust the Modal Container to have no gutter*/
+    .container{
+        width:auto;
+        .show-grid {
+            margin-right: 0;
+            margin-left: 0;
+          
+            > .col,
+            > [class*="col-"] {
+              padding-right: 3px;
+              padding-left: 5px;
+            }
+          }
+    }
+    
+}
+
+/* On Desktops */
+@media screen and (min-width: 768px) {
+    /* Hide row padding for the 2nd Image*/
+    .row-padding {
+       display: none;
+    }
+}
+
+/* On screens that are 768px or less, set the Module Wrapper width 100% */
+@media screen and (max-width: 768px) {
+    .shapesPage{
+    
+        .textHolder{
+            width:100%;
+            float:none;
+            padding:10px;
+        }
+           
+    
+        .imageHolder{
+            margin-top:10px;
+            width:100%;
+        }
+        
+        
+    }
+}
