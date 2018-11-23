@@ -17,7 +17,7 @@ const main = ({ location }) => (
         >
             <Switch location={location}>
          <Route path="/" exact component={Menu}/>
-         <Route path="/shapes" exact component={Shapes} />
+         <Route path="/shapes" exact component={Shapes}  />
          <Route path="/colours" exact component={Colours} />
          </Switch>
         </CSSTransition>

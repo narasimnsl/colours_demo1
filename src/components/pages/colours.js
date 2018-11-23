@@ -10,7 +10,9 @@ import image_3 from '../../images/white.png'
 
 class colours extends Component{
     
-   
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
     onRedClickHandler = () => {
        console.log("Red Spoon Clicked") 
     }

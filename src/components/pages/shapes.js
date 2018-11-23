@@ -12,7 +12,9 @@ import { Row } from 'react-bootstrap';
 
 class shapes extends Component{
     
-    
+    componentDidMount() {
+        window.scrollTo(0, 0);
+      }
 
      
     render(){

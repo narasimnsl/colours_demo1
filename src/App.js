@@ -6,7 +6,7 @@ import Main from './components/main'
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
+      <BrowserRouter >
         <Main >
         </Main>
       </BrowserRouter>
