@@ -8,9 +8,13 @@ import { Grid } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import { Row } from 'react-bootstrap';
 
+import { VelocityComponent } from 'velocity-react';
+
 
 
 class shapes extends Component{
+    
+    
     
     componentDidMount() {
         window.scrollTo(0, 0);
@@ -39,7 +43,11 @@ class shapes extends Component{
             <div className="shapesPage">
             <div className="textHolder">
                 <div className="titleText">
-                    <h2>TASTE: A FIVE-SENSE EXPERIENCE</h2>
+                
+                <VelocityComponent runOnMount animation={"slideDown" } duration={500}>
+                 <h1 style={{marginRight: 'auto', marginLeft: 'auto', textAlign: 'center', position: 'relative'}}>Modal test</h1>
+                </VelocityComponent>
+                   
                 </div>
                 <p>{dummySentences.slice(0, 6).join(' ')}</p>
                 <div className="subText">

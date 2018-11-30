@@ -6,7 +6,9 @@ import { Row } from 'react-bootstrap';
 import image_1 from '../../images/red.png'
 import image_2 from '../../images/green.png'
 import image_3 from '../../images/white.png'
-
+import Spinner from 'react-spinkit';
+import ImageLoader from 'react-loading-image'
+import { VelocityComponent } from 'velocity-react';
 
 class colours extends Component{
     
@@ -49,13 +51,21 @@ class colours extends Component{
         <Aux>
             <div className="coloursPage">
                 <div className="titleText">
-                    <h2>TASTE THE COLOURS</h2>
+                    <VelocityComponent runOnMount animation={{opacity:1 }} duration={1000}>
+                            <h2 style={{opacity:0}}>TASTE THE COLOURS</h2>
+                    </VelocityComponent>
+                   
                 </div>
                     
                     <Grid>
                         <Row className="show-grid">
                         <Col sm={12} md={4}>
-                        <button onClick={this.onRedClickHandler} ><img src={image_1} alt="Red Spoon" /></button>
+                        <button onClick={this.onRedClickHandler} >
+                            <ImageLoader
+                                src={image_1}
+                                loading={() => <Spinner name="ball-clip-rotate-multiple" color="purple"/>}
+                            />
+                        </button>
                             <h2>Red</h2>
                             <p>{dummySentences.slice(0, 6).join(' ')}</p>
                         </Col>
